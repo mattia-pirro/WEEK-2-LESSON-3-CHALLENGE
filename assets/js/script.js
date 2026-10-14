@@ -147,6 +147,14 @@ console.log(personaggiFemminili);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const perColoreOcchi = {
+	blue: [],
+	yellow: [],
+	brown: [],
+	red: [],
+	['blue-gray']: [],
+}
+console.log(perColoreOcchi);
 
 /* ESERCIZIO 4 — Raggruppa per colore degli occhi
    For su starWarsCharacters + switch (character.eye_color).
@@ -155,6 +163,26 @@ console.log(personaggiFemminili);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+for (let i = 0; i < starWarsCharacters.length; i++) {
+	switch (starWarsCharacters[i].eye_color) {
+		case 'blue':
+			perColoreOcchi.blue.push(starWarsCharacters[i].name);
+			break;
+		case 'yellow':
+			perColoreOcchi.yellow.push(starWarsCharacters[i].name);
+			break;
+		case 'brown':
+			perColoreOcchi.brown.push(starWarsCharacters[i].name);
+			break;
+		case 'red':
+			perColoreOcchi.red.push(starWarsCharacters[i].name);
+			break;
+		case 'blue-gray':
+			perColoreOcchi['blue-gray'].push(starWarsCharacters[i].name);
+			break;
+	}
+}
+console.log(perColoreOcchi);
 
 /* ESERCIZIO 5 — Massa totale dell'equipaggio (while)
    i = 0, massaTotale = 0.
@@ -163,6 +191,13 @@ console.log(personaggiFemminili);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let massaTotale = 0;
+let i = 0;
+while (i < starWarsCharacters.length){
+	massaTotale += Number(starWarsCharacters[i].mass);
+	i++;
+}
+console.log('Massa Totale: ' + massaTotale + ' kg');
 
 /* ESERCIZIO 6 — Classifica il carico
    Su massaTotale, switch (true) o if/else if:
@@ -174,6 +209,7 @@ console.log(personaggiFemminili);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
 
 /* ESERCIZIO 7 — Robotizza i n/a
    For: per ogni personaggio con gender === "n/a", cambialo in "robot".
