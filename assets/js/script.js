@@ -249,7 +249,7 @@ console.table(starWarsCharacters);
 /* SCRIVI QUI LA TUA RISPOSTA */
 let max = 0;
 let maxNome;
-let min = starWarsCharacters[0].height;
+let min = Number(starWarsCharacters[0].height);
 let minNome;
 for (let i = 0; i < starWarsCharacters.length; i++) {
 	if (Number(starWarsCharacters[i].height) > max) {
@@ -263,7 +263,6 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 }
 console.log(`Più alto: ${maxNome} (${max} cm)`);
 console.log(`Più alto: ${minNome} (${min} cm)`);
-
 
 /* ESERCIZIO 9 — Rimuovi i femminili dai nomi (cicli annidati)
    Sull'array "nomi" dell'esercizio 1: for esterno su nomi, for interno su personaggiFemminili.
