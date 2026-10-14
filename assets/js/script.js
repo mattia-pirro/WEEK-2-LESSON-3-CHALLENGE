@@ -152,7 +152,7 @@ const perColoreOcchi = {
 	yellow: [],
 	brown: [],
 	red: [],
-	['blue-gray']: [],
+	'blue-gray': [],
 }
 console.table(perColoreOcchi);
 
@@ -292,9 +292,9 @@ console.table(nomi);
 const indice = Math.floor(Math.random() * starWarsCharacters.length);
 const peronaggio = starWarsCharacters[indice];
 console.log(`Personaggio scelto: ${starWarsCharacters[indice].name}`);
-if (starWarsCharacters[indice].gender === 'male'){
+if (starWarsCharacters[indice].gender === 'male') {
 	console.log(`Lui è alto ${starWarsCharacters[indice].height} cm`);
-} else if (starWarsCharacters[indice].gender === 'female'){
+} else if (starWarsCharacters[indice].gender === 'female') {
 	console.log(`Lei è alta ${starWarsCharacters[indice].height} cm`);
 } else {
 	console.log(`Il robot è alto ${starWarsCharacters[indice].height} cm`);
@@ -311,3 +311,28 @@ if (starWarsCharacters[indice].hair_color !== "n/a" && starWarsCharacters[indice
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let blu = 0;
+let giallo = 0;
+let marrone = 0;
+let rosso = 0;
+let bluGrigio = 0;
+for (const chiave in perColoreOcchi.blue) {
+	blu++;
+}
+for (const chiave in perColoreOcchi.yellow) {
+	giallo++;
+}
+for (const chiave in perColoreOcchi.brown) {
+	marrone++;
+}
+for (const chiave in perColoreOcchi.red) {
+	rosso++;
+}
+for (const chiave in perColoreOcchi['blue-gray']) {
+	bluGrigio++;
+}
+console.log(`blue: ${blu} personaggi`);
+console.log(`yellow: ${giallo} personaggi`);
+console.log(`brown: ${marrone} personaggi`);
+console.log(`red: ${rosso} personaggi`);
+console.log(`blue-gray: ${bluGrigio} personaggi`);
