@@ -272,6 +272,7 @@ console.log(`Più alto: ${minNome} (${min} cm)`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('nomi prima: ' + nomi.length);
 for (let i = 0; i < nomi.length; i++) {
 	for (let i2 = 0; i2 < personaggiFemminili.length; i2++) {
 		if (nomi[i] === personaggiFemminili[i2].name) {
@@ -279,6 +280,7 @@ for (let i = 0; i < nomi.length; i++) {
 		}
 	}
 }
+console.log('nomi dopo: ' + nomi.length);
 console.table(nomi);
 
 /* ESERCIZIO 10 — Personaggio casuale
