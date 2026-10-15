@@ -276,6 +276,8 @@ for (let i = 0; i < nomi.length; i++) {
 	for (let i2 = 0; i2 < personaggiFemminili.length; i2++) {
 		if (nomi[i] === personaggiFemminili[i2].name) {
 			nomi.splice(i, 1);
+			i--;
+			break;
 		}
 	}
 }
@@ -312,28 +314,6 @@ if (starWarsCharacters[indice].hair_color !== "n/a" && starWarsCharacters[indice
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let blu = 0;
-let giallo = 0;
-let marrone = 0;
-let rosso = 0;
-let bluGrigio = 0;
-for (const chiave in perColoreOcchi.blue) {
-	blu++;
+for (const chiave in perColoreOcchi) {
+	console.log(`${chiave}: ${perColoreOcchi[chiave].length} personaggi`);
 }
-for (const chiave in perColoreOcchi.yellow) {
-	giallo++;
-}
-for (const chiave in perColoreOcchi.brown) {
-	marrone++;
-}
-for (const chiave in perColoreOcchi.red) {
-	rosso++;
-}
-for (const chiave in perColoreOcchi['blue-gray']) {
-	bluGrigio++;
-}
-console.log(`blue: ${blu} personaggi`);
-console.log(`yellow: ${giallo} personaggi`);
-console.log(`brown: ${marrone} personaggi`);
-console.log(`red: ${rosso} personaggi`);
-console.log(`blue-gray: ${bluGrigio} personaggi`);
